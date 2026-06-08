@@ -8,7 +8,7 @@ public_folder: "/images/uploads"
 collections:
   - name: "products"
     label: "Products"
-    folder: "content/products" # Har nai product ki detail is folder mein save hogi
+    folder: "products" # Har nai product ki detail is folder mein save hogi
     create: true # Taake client nai product add kar sake
     slug: "{{slug}}"
     fields:

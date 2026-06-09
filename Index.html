@@ -1,75 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoor Studio Official</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Poppins', sans-serif; }
-        .serif { font-family: 'Playfair Display', serif; }
-    </style>
-</head>
-<body class="bg-[#FAF9F6] text-[#2C2C2C]">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hoor Studio — Ultra-luxury women's western fashion. New Season 2026.">
+<title>HOOR STUDIO — Luxury Women's Fashion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;1,6..96,300;1,6..96,400&family=Jost:wght@200;300;400;500&family=Italiana&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* ═══════════════════════════════════════════
+   ORIGINAL HOOR STUDIO LUXURY STYLES
+═══════════════════════════════════════════ */
+:root {
+  --ink:      #08080a;
+  --ink-2:    #0f0f12;
+  --ink-3:    #161619;
+  --ink-4:    #1d1d22;
+  --silver:   #a8a8b0;
+  --silver-2: #c8c8d2;
+  --silver-3: #e2e2ec;
+  --platinum: #f5f5f7;
+  --gold:     #c59b27;
+  --gold-2:    #dfb743;
+  --crimson:  #922;
+  --f-serif:  'Italiana', serif;
+  --f-display:'Bodoni Moda', serif;
+  --f-sans:   'Jost', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background-color: var(--ink);
+  color: var(--platinum);
+  font-family: var(--f-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
 
-    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-[#EAE6DF]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0">
-                    <span class="serif text-2xl font-bold tracking-widest text-[#1A1A1A]">HOOR STUDIO</span>
-                </div>
-                <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wider text-[#555555]">
-                    <a href="#" class="hover:text-[#D4AF37] transition-colors">HOME</a>
-                    <a href="#products" class="hover:text-[#D4AF37] transition-colors">COLLECTIONS</a>
-                    <a href="#" class="hover:text-[#D4AF37] transition-colors">ABOUT</a>
-                    <a href="#" class="hover:text-[#D4AF37] transition-colors">CONTACT</a>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <a href="#" class="text-[#2C2C2C] hover:text-[#D4AF37] transition-colors relative">
-                        <i class="fa-solid fa-bag-shopping text-xl"></i>
-                    </a>
-                </div>
+/* TOP BAR & COUNTDOWN */
+.tb {
+  background: var(--ink-3); text-align: center; padding: 12px 20px;
+  font-size: 11px; letter-spacing: 0.15em; font-weight: 300;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.tb-i {
+  display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;
+}
+.cd { display: inline-flex; gap: 8px; font-weight: 400; color: var(--gold); }
+
+/* NAVBAR */
+.nb {
+  position: fixed; top: 0; left: 0; width: 100%;
+  background: rgba(8,8,10,0.75); backdrop-filter: blur(20px);
+  z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nb-i {
+  max-width: 1600px; margin: 0 auto; padding: 0 40px;
+  display: flex; justify-content: space-between; align-items: center; height: 90px;
+}
+.logo { font-family: var(--f-serif); font-size: 26px; letter-spacing: 0.15em; font-weight: 400; }
+.links { display: flex; gap: 40px; font-size: 11px; letter-spacing: 0.2em; font-weight: 400; text-transform: uppercase; }
+.links a { transition: color 0.3s; opacity: 0.8; }
+.links a:hover { color: var(--gold); opacity: 1; }
+
+/* HERO */
+.hero {
+  height: 85vh; min-height: 650px; background: var(--ink-2);
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  position: relative; padding-top: 90px;
+}
+.hero-c { max-width: 800px; padding: 0 20px; z-index: 2; }
+.hero h1 { font-family: var(--f-serif); font-size: calc(2.5rem + 2vw); font-weight: 400; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 24px; color: var(--platinum); }
+.hero p { font-size: 15px; font-weight: 300; line-height: 1.6; max-width: 500px; margin: 0 auto 40px; color: var(--silver); }
+.btn {
+  display: inline-block; padding: 16px 45px; font-size: 11px; letter-spacing: 0.25em;
+  text-transform: uppercase; background: transparent; color: var(--platinum);
+  border: 1px solid rgba(255,255,255,0.2); transition: all 0.4s cubic-bezier(0.16,1,0.3,1); cursor: pointer;
+}
+.btn:hover { background: var(--platinum); color: var(--ink); border-color: var(--platinum); transform: translateY(-2px); }
+
+/* PRODUCT SECTION WITH 3D PERSPECTIVE */
+.sec { max-width: 1600px; margin: 0 auto; padding: 120px 40px; }
+.sec-h { text-align: center; margin-bottom: 70px; }
+.sec-h h2 { font-family: var(--f-serif); font-size: 38px; font-weight: 400; letter-spacing: 0.05em; margin-bottom: 12px; }
+.sec-h p { font-size: 12px; color: var(--gold); letter-spacing: 0.2em; text-transform: uppercase; }
+
+.grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); 
+  gap: 50px 30px; 
+  perspective: 1200px; 
+}
+
+/* CARDS WITH INTERACTIVE 3D & GLOW EFFECTS */
+.card { 
+  display: flex; 
+  flex-direction: column; 
+  background: var(--ink-2); 
+  position: relative; 
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease; 
+  will-change: transform;
+}
+.card:hover { 
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.75), 0 0 25px rgba(197, 155, 39, 0.06);
+}
+
+.img-box { 
+  position: relative; 
+  width: 100%; 
+  aspect-ratio: 3/4; 
+  overflow: hidden; 
+  background: var(--ink-3); 
+  transform: translateZ(20px);
+}
+.img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+
+/* MULTIPLE IMAGES THUMBNAILS */
+.thumbs-container { 
+  display: flex; 
+  gap: 8px; 
+  padding: 12px 16px 0; 
+  overflow-x: auto; 
+  transform: translateZ(15px); 
+}
+.thumb-img { width: 45px; height: 55px; object-fit: cover; border: 1px solid rgba(255,255,255,0.1); cursor: pointer; transition: all 0.2s; }
+.thumb-img:hover { border-color: var(--gold); }
+
+.card-meta { 
+  padding: 24px 16px; 
+  flex-grow: 1; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
+  transform: translateZ(25px);
+}
+.c-title { font-family: var(--f-display); font-size: 19px; font-weight: 300; letter-spacing: 0.02em; color: var(--platinum); margin-bottom: 6px; }
+.c-desc { font-size: 13px; color: var(--silver); font-weight: 300; line-height: 1.5; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.c-row { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.04); }
+.price { font-size: 16px; font-weight: 400; color: var(--platinum); }
+.old-price { font-size: 12px; color: rgba(255,255,255,0.3); text-decoration: line-through; margin-left: 6px; }
+
+/* 🟢 ORDER ON WHATSAPP BUTTON STYLING */
+.wa-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; background: #128c7e; color: #fff;
+  font-weight: 400; border: none; transition: background 0.3s; cursor: pointer;
+}
+.wa-btn:hover { background: #075e54; }
+
+.badge { position: absolute; top: 15px; left: 15px; z-index: 5; font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; padding: 6px 14px; background: var(--gold); color: var(--ink); transform: translateZ(30px); }
+.badge.sale { background: var(--crimson); color: var(--platinum); }
+
+/* SCROLL INTERSECTION ANIMATION */
+.sr { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+.sr.v { opacity: 1; transform: translateY(0); }
+
+#loading-status { grid-column: 1 / -1; text-align: center; padding: 60px 0; font-size: 14px; letter-spacing: 0.15em; color: var(--silver); }
+
+/* FOOTER */
+footer { background: #040405; padding: 60px 40px; text-align: center; font-size: 11px; letter-spacing: 0.15em; color: rgba(255,255,255,0.3); border-top: 1px solid rgba(255,255,255,0.02); }
+
+@media(max-width:768px) {
+  .nb-i { padding: 0 20px; }
+  .links { display: none; }
+  .sec { padding: 80px 20px; }
+  .grid { grid-template-columns: 1fr; gap: 40px; }
+}
+</style>
+</head>
+<body>
+
+    <div class="tb">
+        <div class="tb-i">
+            <span>RAMADAN LUXURY COUTURE EVENT • COMPLIMENTARY EXPEDITED SHIPPING</span>
+            <div class="cd">
+                CLOSING IN: <span id="cdD">02</span>d : <span id="cdH">14</span>h : <span id="cdM">37</span>m : <span id="cdS">44</span>s
             </div>
+        </div>
+    </div>
+
+    <nav class="nb" style="top:40px;">
+        <div class="nb-i">
+            <div class="logo">HOOR STUDIO</div>
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#collections">Collections</a>
+                <a href="#">The Studio</a>
+                <a href="#">Contact</a>
+            </div>
+            <div style="font-size:16px; cursor:pointer; color:var(--platinum);"><i class="fa-solid fa-bag-shopping"></i></div>
         </div>
     </nav>
 
-    <header class="relative bg-[#EAE6DF] h-[60vh] flex items-center overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-            <div class="max-w-md">
-                <span class="text-xs font-bold tracking-widest text-[#D4AF37] block mb-2">NEW COLLECTION</span>
-                <h1 class="serif text-4xl sm:text-5xl font-light tracking-wide text-[#1A1A1A] leading-tight mb-4">Elegance In Every Thread</h1>
-                <p class="text-sm text-[#555555] mb-6 font-light">Discover premium fabrics and timeless designs crafted for the modern woman.</p>
-                <a href="#products" class="inline-block bg-[#1A1A1A] text-white text-xs tracking-widest px-8 py-3.5 hover:bg-[#D4AF37] transition-colors duration-300">SHOP NOW</a>
-            </div>
+    <header class="hero" style="padding-top:130px;">
+        <div class="hero-c sr">
+            <h1>The Art of Dressing Luxury</h1>
+            <p>Impeccable silhouettes, ultra-premium craftsmanship, and timeless elegance designed for the modern woman.</p>
+            <a href="#collections" class="btn">Explore Collection</a>
         </div>
     </header>
 
-    <section id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="text-center mb-12">
-            <h2 class="serif text-3xl font-light tracking-wide text-[#1A1A1A]">Our Masterpieces</h2>
-            <div class="h-[1px] w-12 bg-[#D4AF37] mx-auto mt-3"></div>
+    <section id="collections" class="sec">
+        <div class="sec-h sr">
+            <p>New Season 2026</p>
+            <h2>The Masterpieces</h2>
         </div>
 
-        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div id="loading-status" class="col-span-full text-center py-12 text-[#555555] font-light tracking-wider">
-                <i class="fa-solid fa-spinner fa-spin text-2xl text-[#D4AF37] mb-2 block"></i>
-                Loading luxury collection...
+        <div id="products-grid" class="grid">
+            <div id="loading-status">
+                <p style="animation: pulse 1.5s infinite; font-weight:300; letter-spacing: 0.15em;">LOADING LUXURY COLLECTION...</p>
             </div>
         </div>
     </section>
 
-    <footer class="bg-[#1A1A1A] text-white py-12 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs tracking-widest text-gray-400">
-            <p>&copy; 2026 HOOR STUDIO. ALL RIGHTS RESERVED.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 HOOR STUDIO. ULTRA-LUXURY ATELIER. ALL RIGHTS RESERVED.</p>
     </footer>
 
     <script>
-        // Simple YAML/FrontMatter parser function
         function parseFrontMatter(text) {
             const lines = text.split('\n');
             const data = { images: [] };
@@ -83,22 +236,17 @@
                     continue;
                 }
                 if (isYaml) {
-                    // Check for list items under images
                     if (line.trim().startsWith('-') && currentKey === 'images') {
                         const imgUrl = line.replace(/['-]/g, '').trim();
                         if (imgUrl) data.images.push(imgUrl);
                         continue;
                     }
-                    
                     const splitIdx = line.indexOf(':');
                     if (splitIdx !== -1) {
                         const key = line.slice(0, splitIdx).trim();
                         let value = line.slice(splitIdx + 1).trim().replace(/^["']|["']$/g, '');
                         currentKey = key;
-                        
-                        if (key !== 'images') {
-                            data[key] = value;
-                        }
+                        if (key !== 'images') data[key] = value;
                     }
                 } else {
                     bodyLines.push(line);
@@ -108,33 +256,44 @@
             return data;
         }
 
-        // Main function to load products from /products/ folder
+        // 3D Card Rotation Function
+        function apply3DEffect(card) {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((centerY - y) / centerY) * 12;
+                const rotateY = ((x - centerX) / centerX) * 12;
+                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            });
+        }
+
         async function loadProducts() {
             const grid = document.getElementById('products-grid');
             const status = document.getElementById('loading-status');
 
             try {
-                // Fetch the automatically generated repository directory list via Netlify
                 const response = await fetch('/products/');
-                if (!response.ok) throw new Error('Could not read products directory');
+                if (!response.ok) throw new Error('Directory lookup failed');
                 
                 const htmlText = await response.text();
-                
-                // Extract all .md file links from the directory page
                 const doc = new DOMParser().parseFromString(htmlText, 'text/html');
                 const links = Array.from(doc.querySelectorAll('a'))
                                    .map(a => a.getAttribute('href'))
                                    .filter(href => href && href.endsWith('.md'));
 
                 if (links.length === 0) {
-                    grid.innerHTML = `<div class="col-span-full text-center py-12 text-[#555555] font-light">No products uploaded yet. Check back soon!</div>`;
+                    grid.innerHTML = `<div id="loading-status" style="animation:none;">NO PRODUCTS FOUND IN GALLERY.</div>`;
                     return;
                 }
 
-                // Remove loading message
                 if (status) status.remove();
 
-                // Loop and fetch data inside each markdown file
                 for (let fileUrl of links) {
                     try {
                         const fileRes = await fetch(fileUrl);
@@ -143,71 +302,89 @@
                         const mdContent = await fileRes.text();
                         const product = parseFrontMatter(mdContent);
 
-                        // Fallback image if array is empty
-                        if (product.images.length === 0 && product.image) {
-                            product.images.push(product.image);
-                        }
-                        if (product.images.length === 0) {
-                            product.images.push('https://via.placeholder.com/400x500?text=No+Image');
-                        }
+                        if (product.images.length === 0 && product.image) product.images.push(product.image);
+                        if (product.images.length === 0) product.images.push('https://via.placeholder.com/600x800?text=Hoor+Studio');
 
-                        // Create unique ID for image switcher
-                        const pId = 'prod-' + Math.random().toString(36).substr(2, 9);
-
-                        // Generate Dynamic Card HTML matching your theme
+                        const pId = 'luxury-' + Math.random().toString(36).substr(2, 9);
                         const card = document.createElement('div');
-                        card.className = "group bg-white border border-[#EAE6DF] overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md";
-                        
-                        // Generate Thumbnails HTML if there are multiple images
-                        let thumbnailsHtml = '';
+                        card.className = "card sr";
+
+                        let thumbsHtml = '';
                         if (product.images.length > 1) {
-                            thumbnailsHtml = `<div class="flex space-x-1.5 mt-2 overflow-x-auto px-4 pb-2">`;
-                            product.images.forEach((img, index) => {
-                                thumbnailsHtml += `
-                                    <img src="${img}" 
-                                         onclick="document.getElementById('${pId}').src='${img}'" 
-                                         class="w-10 h-12 object-cover border border-[#EAE6DF] cursor-pointer hover:border-[#D4AF37] transition-all" 
-                                         alt="thumb">`;
+                            thumbsHtml = `<div class="thumbs-container">`;
+                            product.images.forEach(img => {
+                                thumbsHtml += `<img src="${img}" class="thumb-img" onclick="document.getElementById('${pId}').src='${img}'" alt="thumbnail">`;
                             });
-                            thumbnailsHtml += `</div>`;
+                            thumbsHtml += `</div>`;
                         }
+
+                        // 📱 PROPER WHATSAPP NUMBER AND DYNAMIC TEXT LINK
+                        const waNumber = "923059218013"; 
+                        const waMessage = encodeURIComponent(`Salam Hoor Studio, I would like to order:\n\nProduct: ${product.title}\nPrice: ${product.price}\nLink: ${window.location.origin}${fileUrl}`);
+                        const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
 
                         card.innerHTML = `
-                            <div class="relative overflow-hidden aspect-[4/5] bg-[#F7F7F7]">
-                                ${product.badge ? `<span class="absolute top-4 left-4 z-10 text-[10px] tracking-widest uppercase font-bold px-2.5 py-1 ${product.badge_style === 'sale' ? 'bg-[#982B2B] text-white' : 'bg-[#D4AF37] text-white'}">${product.badge}</span>` : ''}
-                                <img id="${pId}" src="${product.images[0]}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="${product.title}">
+                            <div class="img-box">
+                                ${product.badge ? `<span class="badge ${product.badge_style === 'sale' ? 'sale' : ''}">${product.badge}</span>` : ''}
+                                <img id="${pId}" src="${product.images[0]}" alt="${product.title}">
                             </div>
-                            ${thumbnailsHtml}
-                            <div class="p-5 flex-grow flex flex-col justify-between">
+                            ${thumbsHtml}
+                            <div class="card-meta">
                                 <div>
-                                    <span class="text-[10px] tracking-widest text-[#D4AF37] uppercase font-semibold block mb-1">${product.category || 'Collection'}</span>
-                                    <h3 class="serif text-lg text-[#1A1A1A] font-light tracking-wide mb-2">${product.title}</h3>
-                                    <p class="text-xs text-[#777777] font-light line-clamp-2 mb-4">${product.description}</p>
+                                    <h3 class="c-title">${product.title}</h3>
+                                    <p class="c-desc">${product.description}</p>
                                 </div>
-                                <div class="flex items-center justify-between pt-2 border-t border-[#F4F1EA]">
-                                    <div class="flex items-baseline space-x-2">
-                                        <span class="text-sm font-medium text-[#1A1A1A]">${product.price}</span>
-                                        ${product.old_price ? `<span class="text-xs text-gray-400 line-through font-light">${product.old_price}</span>` : ''}
+                                <div class="c-row">
+                                    <div class="price">
+                                        <span>${product.price}</span>
+                                        ${product.old_price ? `<span class="old-price">${product.old_price}</span>` : ''}
                                     </div>
-                                    <button class="text-xs tracking-widest text-[#1A1A1A] hover:text-[#D4AF37] font-medium transition-colors uppercase">
-                                        <i class="fa-solid fa-plus mr-1 text-[10px]"></i> View
-                                    </button>
+                                    <a href="${waUrl}" target="_blank" class="wa-btn">
+                                        <i class="fa-brands fa-whatsapp text-sm"></i> Order
+                                    </a>
                                 </div>
                             </div>
                         `;
+                        
+                        apply3DEffect(card);
                         grid.appendChild(card);
-                    } catch (e) {
-                        console.error("Error reading individual product file:", e);
-                    }
+                    } catch (e) { console.error(e); }
                 }
+
+                // Trigger animations
+                const srEls = document.querySelectorAll('.sr');
+                const obs = new IntersectionObserver(entries => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add('v');
+                            obs.unobserve(e.target);
+                        }
+                    });
+                }, { threshold: 0.05 });
+                srEls.forEach(el => obs.observe(el));
+
             } catch (error) {
-                console.error("Error loading luxury products collection:", error);
-                grid.innerHTML = `<div class="col-span-full text-center py-12 text-[#982B2B] font-light">Failed to load the collection. Please refresh the page.</div>`;
+                console.error(error);
+                grid.innerHTML = `<div id="loading-status" style="color:var(--crimson);">ERROR LOADING COLLECTION.</div>`;
             }
         }
 
-        // Initialize script on load
-        window.addEventListener('DOMContentLoaded', loadProducts);
+        // COUNTDOWN TIMER TICKER
+        const endTime = Date.now() + (2*86400+14*3600+37*60+44)*1000;
+        function tick(){
+            const diff = Math.max(0,Math.floor((endTime-Date.now())/1000));
+            document.getElementById('cdD').textContent=String(Math.floor(diff/86400)).padStart(2,'0');
+            document.getElementById('cdH').textContent=String(Math.floor(diff%86400/3600)).padStart(2,'0');
+            document.getElementById('cdM').textContent=String(Math.floor(diff%3600/60)).padStart(2,'0');
+            document.getElementById('cdS').textContent=String(diff%60).padStart(2,'0');
+        }
+        setInterval(tick,1000);
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadProducts();
+            tick();
+            setTimeout(() => { document.querySelector('.hero .sr').classList.add('v'); }, 200);
+        });
     </script>
 </body>
 </html>
